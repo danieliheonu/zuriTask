@@ -14,8 +14,6 @@ from pathlib import Path
 import os
 from django.core.exceptions import ImproperlyConfigured
 
-import django_heroku
-
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -156,5 +154,3 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
-
-django_heroku.settings(locals())
