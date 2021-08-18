@@ -1,1 +1,1 @@
-web: gunicorn zuritask.wsgi --log-file 
+web: gunicorn zuritask.wsgi --log-file -
