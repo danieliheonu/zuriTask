@@ -14,6 +14,8 @@ from pathlib import Path
 import os
 from django.core.exceptions import ImproperlyConfigured
 
+import django_heroku
+
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -47,7 +49,7 @@ DEBUG = False
 if ENV_ROLE == "development":
     DEBUG = True
 
-ALLOWED_HOSTS = ["zuritask.herokuapp.com", "127.0.0.1"]
+ALLOWED_HOSTS = ["zuritask.herokuapp.com", "localhost"]
 
 
 # Application definition
@@ -154,3 +156,5 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
+
+django_heroku.settings(locals())
