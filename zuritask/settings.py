@@ -25,7 +25,6 @@ def get_env_variable(var_name):
 
 
 ENV_ROLE = get_env_variable('ENV_ROLE')
-BASE_URL = get_env_variable('BASE_URL')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve(strict=True).parent.parent
