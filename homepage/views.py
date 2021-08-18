@@ -7,14 +7,6 @@ from django.conf import settings
 def home(request):
 
     if request.method == "POST":
-
-        send_mail(
-            request.POST['subject'],
-            request.POST['body'],
-            request.POST['name'],
-            [settings.EMAIL_HOST_USER],
-            fail_silently=False,
-        )
-
-        return render(request, 'success.html')
+        name = request.POST['name']
+        return render(request, 'success.html', {'name': name})
     return render(request, 'index.html')
