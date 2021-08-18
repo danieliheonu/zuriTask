@@ -1,0 +1,1 @@
+web: gunicorn zuritask.wsgi --log-file 

@@ -47,7 +47,7 @@ DEBUG = False
 if ENV_ROLE == "development":
     DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [BASE_URL]
 
 
 # Application definition
